@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<style>
+    body {
+      background-color: #0a1a5a;
+        text-align: center;
+    }
+
+    h1 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 120px;
+
+    }
+
+    button {
+      background-color: #003ccd;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-decoration: none;
+      font-size: 200px;
+      margin: 4px 2px;
+      border-radius: 20px;
+      font-family: sans-serif;
+
+    }
+
+    p {
+        color: #0a1a5a;
+    }
+
+
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#test').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/backend',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="sleep.css">
+  <head>
+    <meta charset="utf-8">
+    <title>Go to sleep</title>
+  </head>
+    <?php
+        $command = escapeshellcmd('main.py');
+        echo shell_exec($command);
+    ?>
+  <div class="main">
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <body>
+        <h1 id="title">Night Night</h1>
+      </body>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <div class="box">
+          <a href=# id=test><button>SLEEP</button></a>
+      </div>
+  </div>
+</html>
